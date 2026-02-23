@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://vytronsystems.com/sitemap.xml
