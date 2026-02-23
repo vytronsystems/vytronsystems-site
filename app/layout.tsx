@@ -13,7 +13,8 @@ export const metadata: Metadata = {
   },
 
   description:
-    "Vytron Systems designs resilient regulatory infrastructure and enterprise reporting platforms for financial institutions.",
+"Vytron Systems designs enterprise regulatory infrastructure and resilient reporting platforms for financial institutions and regulated environments.",
+
 
   alternates: {
     canonical: "/",
@@ -23,12 +24,12 @@ export const metadata: Metadata = {
     title:
       "Vytron Systems — Designing Resilient Infrastructure for Regulated Systems",
     description:
-      "Enterprise regulatory infrastructure engineering for financial institutions and regulated environments.",
+"Vytron Systems designs enterprise regulatory infrastructure and resilient reporting platforms for financial institutions and regulated environments.",
     url: "https://vytronsystems.com",
     siteName: "Vytron Systems",
     images: [
       {
-        url: "/logo.png",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "Vytron Systems",
@@ -51,7 +52,30 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body>{children}</body>
+
+      <body>
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "Vytron Systems",
+              url: "https://vytronsystems.com",
+              logo: "https://vytronsystems.com/logo.png",
+              sameAs: [
+                "https://www.linkedin.com/company/vytron-systems"
+              ],
+            }),
+          }}
+        />
+
+        {children}
+
+      </body>
+
     </html>
   );
 }
+
