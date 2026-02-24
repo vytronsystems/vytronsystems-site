@@ -53,6 +53,7 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  },
 
 };
 
@@ -62,21 +63,28 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 
       <body>
 
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              name: "Vytron Systems",
-              url: "https://vytronsystems.com",
-              logo: "https://vytronsystems.com/logo.png",
-              sameAs: [
-                "https://www.linkedin.com/company/vytron-systems"
-              ],
-            }),
-          }}
-        />
+      <body>
+
+			<script
+			type="application/ld+json"
+			dangerouslySetInnerHTML={{
+			__html: JSON.stringify({
+			"@context":"https://schema.org",
+			"@type":"Organization",
+			"name":"Vytron Systems",
+			"url":"https://vytronsystems.com",
+			"logo":"https://vytronsystems.com/logo.png",
+			"description":"Enterprise regulatory infrastructure engineering and resilient reporting platforms for financial institutions.",
+			"sameAs":[
+			"https://www.linkedin.com/company/vytronsystems"
+			]
+			})
+			}}
+			/>
+
+{children}
+
+</body>
 
         {children}
 
