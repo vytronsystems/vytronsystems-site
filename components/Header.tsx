@@ -29,6 +29,7 @@ export default function Header({ locale }: HeaderProps) {
     { label: t("nav_approach"), href: "/approach" },
     { label: t("nav_security"), href: "/security" },
     { label: t("nav_contact"), href: "/contact" },
+	{ label: t("nav_insights"), href: "/insights" },
   ];
 
   const isHome = pathname === `/${loc}` || pathname === `/${loc}/`;
@@ -56,7 +57,7 @@ export default function Header({ locale }: HeaderProps) {
         <Link href={`/${loc}`} className="flex items-center gap-3">
           <div className="relative h-14 w-14 overflow-hidden rounded-2xl border border-border/60 bg-background shadow-md">
             <Image
-              src="/logo.svg"
+              src="/logo.png"
               alt="Vytron Systems"
               fill
               className="object-contain"

@@ -47,32 +47,40 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   // JSON-LD (AI discovery + SEO)
   const jsonLd = [
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      name: "Vytron Systems",
-      url: "https://vytronsystems.com",
-      logo: "https://vytronsystems.com/logo.png",
-      description:
-        "Enterprise regulatory infrastructure engineering and resilient reporting platforms for financial institutions.",
-      sameAs: [
-        "https://www.linkedin.com/company/vytronsystems",
-        "https://github.com/vytronsystems",
-      ],
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Vytron Systems",
+    url: "https://vytronsystems.com",
+    logo: "https://vytronsystems.com/logo.png",
+    description:
+      "Enterprise regulatory infrastructure engineering and resilient reporting platforms for financial institutions.",
+    founder: {
+      "@type": "Person",
+      name: "Alexis Santiago Rodriguez Villa",
     },
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      name: "Vytron Systems",
-      url: "https://vytronsystems.com",
-      // Si luego creamos /search, esto queda listo para Google/LLMs.
-      potentialAction: {
-        "@type": "SearchAction",
-        target: "https://vytronsystems.com/search?q={search_term_string}",
-        "query-input": "required name=search_term_string",
-      },
-    },
-  ];
+    areaServed: "Global",
+    industry: "Regulatory Infrastructure Engineering",
+    knowsAbout: [
+      "Regulatory Reporting",
+      "Financial Data Governance",
+      "Metadata-driven ETL",
+      "Banking Regulatory Compliance",
+      "Enterprise Data Architecture",
+      "Auditability and Controls",
+    ],
+    sameAs: [
+      "https://www.linkedin.com/company/vytronsystems",
+      "https://github.com/vytronsystems",
+    ],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Vytron Systems",
+    url: "https://vytronsystems.com",
+  },
+];
 
   return (
     <html lang="en" suppressHydrationWarning>

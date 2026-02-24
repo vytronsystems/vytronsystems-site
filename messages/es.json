@@ -5,13 +5,18 @@
   "nav_approach": "Enfoque",
   "nav_security": "Seguridad",
   "nav_contact": "Contacto",
+  "nav_insights": "Insigths",
   "nav_cta": "Contacto",
-  "nav_switch_language": "Cambiar idioma",
-  "pill": "Entidades reguladas",
+  "nav_switch_language": "Cambiar idioma",  
+  "pill": "Entidades reguladas",  
   "hero_title": "Ingeniería de infraestructura de reportes para entornos complejos y regulados.",
   "hero_sub": "Vytron Systems diseña y entrega operaciones de reportes estructuradas, auditables y configurables para instituciones reguladas — iniciando como servicios y evolucionando hacia una plataforma producto escalable.",
   "cta_primary": "Solicitar una evaluación de infraestructura",
-  "cta_secondary": "Agendar consulta técnica",
+  "cta_secondary": "Agendar consulta técnica",  
+  "locale": "es",  
+  "nav_descriptor":"Ingeniería para infraestructura Regulatoria",  
+  "contact_title": "Contacto",	
+  "contact_body": "Cuéntanos qué necesitas entregar—reportes, formatos, plazos, restricciones y fuentes actuales. Respondemos en un día laborable.",
   "card1_kicker": "Basado en reglas",
   "card1_title": "Mapeos y validaciones declarativas",
   "card1_text": "Reglas configurables por campo, catálogos, padding/longitud y compuertas de validación alineadas al formato del regulador.",
@@ -49,8 +54,7 @@
   "approach_2": "Blueprint: staging, capa canónica, metadata y runtime de ejecución de reglas.",
   "approach_3": "Implementación: reportes priorizados, validación automática, evidencia y conciliación.",
   "approach_4": "Operación: monitoreo, re-ejecuciones, controles de despliegue y runbooks.",
-  "approach_5": "Roadmap: transición de servicios a plataforma producto con el tiempo.",
-  "contact_title": "Contacto",
+  "approach_5": "Roadmap: transición de servicios a plataforma producto con el tiempo.", 
   "contact_sub": "Para propuestas, evaluaciones o una revisión técnica de la arquitectura.",
   "contact_email_label": "Correo",
   "contact_response_label": "Tiempo de respuesta",
@@ -69,10 +73,67 @@
   "app_title": "Enfoque",
   "app_body": "Iniciamos con un assessment de arquitectura y entregamos una ruta incremental: estabilizar fuentes, modelar staging canónico, externalizar reglas y automatizar generación + reconciliación con controles auditables.",
   "sec_title": "Seguridad",
-  "sec_body": "Seguridad desde el diseño: mínimo privilegio, separación de ambientes, auditoría, builds determinísticos y controles de despliegue. Alineado con baselines enterprise y expectativas del regulador.",
-  "contact_body": "Cuéntanos qué necesitas entregar—reportes, formatos, plazos, restricciones y fuentes actuales. Respondemos en un día laborable.",
-  "locale": "es",
-  "nav_descriptor":"Ingeniería para infraestructura Regulatoria",
+  "sec_body": "Seguridad desde el diseño: mínimo privilegio, separación de ambientes, auditoría, builds determinísticos y controles de despliegue. Alineado con baselines enterprise y expectativas del regulador.",  
   "a_secure_title": "Postura de Seguridad y Gobernanza",
-  "a_secure_statement": "Vytron Systems implementa acceso de mínimo privilegio, configuraciones seguras por defecto y controles operativos listos para auditoría. El mapeo detallado de controles (SOC 2, ISO 27001, PCI y requisitos regulatorios locales) se entrega durante el proceso de contratación."
+  "a_secure_statement": "Vytron Systems implementa acceso de mínimo privilegio, configuraciones seguras por defecto y controles operativos listos para auditoría. El mapeo detallado de controles (SOC 2, ISO 27001, PCI y requisitos regulatorios locales) se entrega durante el proceso de contratación.",
+
+  "insightsIndex": {
+    "title": "Insights",
+    "subtitle": "Notas prácticas sobre infraestructura de reportes regulatorios, gobernanza y entrega enterprise resiliente.",
+    "read": "Leer",
+    "a": {
+      "title": "Arquitectura de reportes regulatorios: un blueprint resiliente",
+      "desc": "Arquitectura de referencia para ingesta, validación, auditabilidad (como valor agregado de la solución) y generación de salidas en múltiples formatos regulatorios."
+    },
+    "b": {
+      "title": "Reportería basada en metadata: escalar sin reescribir",
+      "desc": "Cómo la metadata habilita mapeos configurables, reglas reutilizables y cambios controlados en entornos regulados. Cómo una plataforma basada en metadata reduce riesgo, costo y tiempo de entrega"
+    }
+  },
+  "insightRRA": {
+    "title": "Arquitectura de reportes regulatorios: un blueprint resiliente",
+    "lede": "Una arquitectura pragmática para entornos regulados: ingesta trazable, transformaciones determinísticas, reglas verificables y salidas auditables.",
+    "s1": {
+      "title": "Objetivo central",
+      "body": "Entregar salidas regulatorias correctas (TXT/XML/Excel) con trazabilidad completa: desde la fuente hasta evidencia a nivel de campo, incluyendo aprobaciones y controles operativos."
+    },
+    "s2": {
+      "title": "Capas clave",
+      "li1": "Ingesta y normalización: conectores + staging + modelo canónico",
+      "li2": "Validación: motor de reglas + umbrales + flujo de excepciones",
+      "li3": "Generación: formateo determinístico + plantillas versionadas",
+      "li4": "Auditabilidad: repositorio de evidencias, reproducibilidad y bitácoras inmutables"
+    },
+    "s3": {
+      "title": "Resiliencia operativa",
+      "body": "Trata cada corrida como un proceso controlado: aprobaciones, roles (dueño/custodio/generador), corridas idempotentes y conciliaciones post-ejecución."
+    },
+    "cta": {
+      "title": "Dónde encaja Vytron",
+      "body": "Vytron Systems diseña la infraestructura para que la reportería regulatoria sea confiable a escala enterprise: mapeos por metadata, controles y entrega audit-first."
+    }
+  },
+  "insightMDR": {
+    "title": "Reportería basada en metadata: escalar sin reescribir",
+    "lede": "La metadata separa el cambio del negocio del cambio de código: mapeos, validaciones y formatos evolucionan sin reingeniería del pipeline.",
+    "s1": {
+      "title": "Qué significa “metadata-driven”",
+      "body": "Las definiciones viven en datos: estructura del reporte, reglas de campos, mapeos a fuentes y formateo de salida. El código queda como un motor estable que interpreta metadata."
+    },
+    "s2": {
+      "title": "Qué ganas",
+      "li1": "Onboarding más rápido de nuevos reportes (reusar motor + definir metadata)",
+      "li2": "Gestión de cambios más segura (esquemas y mapeos versionados)",
+      "li3": "Gobernanza clara (quién cambió qué, cuándo y por qué)",
+      "li4": "Validaciones consistentes entre instituciones y formatos"
+    },
+    "s3": {
+      "title": "Controles enterprise",
+      "body": "Combina metadata con aprobaciones, segregación de funciones y un rastro de evidencias para que auditoría pueda reproducir cualquier salida de forma determinística."
+    },
+    "cta": {
+      "title": "Siguiente paso recomendado",
+      "body": "Crea un set mínimo de tablas canónicas de metadata para un reporte (AN03) y crece desde ahí: mapeos → reglas → salidas → auditoría."
+    }
+  }
 }
