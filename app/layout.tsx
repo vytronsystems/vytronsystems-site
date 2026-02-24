@@ -46,6 +46,13 @@ export const metadata: Metadata = {
       "Regulatory Infrastructure Engineering for Financial Institutions.",
     images: ["/vytron-og.png"],
   },
+  robots: {
+  index: true,
+  follow: true,
+  googleBot: {
+    index: true,
+    follow: true,
+  },
 
 };
 
