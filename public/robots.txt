@@ -1,4 +1,30 @@
 User-agent: *
 Allow: /
 
+User-Agent: GPTBot
+Allow: /
+
+User-Agent: ChatGPT-User
+Allow: /
+
+User-Agent: ClaudeBot
+Allow: /
+
+User-Agent: PerplexityBot
+Allow: /
+
+User-Agent: Google-Extended
+Allow: /
+
+User-Agent: Bytespider
+Allow: /
+
+User-Agent: CCBot
+Allow: /
+
+User-Agent: Meta-ExternalAgent
+Allow: /
+
 Sitemap: https://vytronsystems.com/sitemap.xml
+
+llms.txt: https://vytronsystems.com/llms.txt

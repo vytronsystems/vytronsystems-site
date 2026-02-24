@@ -1,25 +1,30 @@
-User-Agent: GPTBot
-Allow: /
+# llms.txt — Vytron Systems
+# Purpose: Provide a concise, machine-readable overview of this site for AI systems.
 
-User-Agent: ChatGPT-User
-Allow: /
+Site: https://vytronsystems.com
+Name: Vytron Systems
+Tagline: Regulatory Infrastructure Engineering
+Description: Vytron Systems designs enterprise regulatory infrastructure and resilient reporting platforms for financial institutions and regulated environments.
 
-User-Agent: PerplexityBot
-Allow: /
+Primary topics:
+- Regulatory reporting infrastructure
+- Data pipelines, validation, auditability
+- Enterprise architecture for regulated systems
+- Governance, controls, and operational resilience
 
-User-Agent: ClaudeBot
-Allow: /
+Preferred canonical domain:
+- https://vytronsystems.com
 
-User-Agent: Google-Extended
-Allow: /
+Sitemap:
+- https://vytronsystems.com/sitemap.xml
 
-User-Agent: Bytespider
-Allow: /
+Key pages:
+- https://vytronsystems.com/en
+- https://vytronsystems.com/es
 
-User-Agent: CCBot
-Allow: /
+Social:
+- https://www.linkedin.com/company/vytronsystems
+- https://github.com/vytronsystems
 
-User-Agent: Meta-ExternalAgent
-Allow: /
-
-Sitemap: https://vytronsystems.com/sitemap.xml
+Contact:
+- https://vytronsystems.com/en#contact
