@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     siteName: "Vytron Systems",
     images: [
       {
-        url: "/og-image.png",
+        url: "/vytron-og.png",
         width: 1200,
         height: 630,
         alt: "Vytron Systems",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     title: "Vytron Systems",
     description:
       "Regulatory Infrastructure Engineering for Financial Institutions.",
-    images: ["/logo.png"],
+    images: ["/vytron-og.png"],
   },
 
 };
