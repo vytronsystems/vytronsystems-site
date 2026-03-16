@@ -6,18 +6,18 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   metadataBase: new URL("https://vytronsystems.com"),
   title: {
-    default: "Vytron Systems — Regulatory Infrastructure Engineering",
+    default: "Vytron Systems — Enterprise Software Engineering & Regulatory Intelligence",
     template: "%s | Vytron Systems",
   },
   description:
-    "Vytron Systems designs enterprise regulatory infrastructure and resilient reporting platforms for financial institutions and regulated environments.",
+    "Vytron Systems engineers intelligent, scalable and compliant enterprise solutions: software architecture, AI, data engineering, data governance, database management, MRI reporting and software factory delivery.",
   alternates: {
-    canonical: "/",
+    canonical: "https://vytronsystems.com/en",
   },
   openGraph: {
-    title: "Vytron Systems — Designing Resilient Infrastructure for Regulated Systems",
+    title: "Vytron Systems — Engineering Regulatory Intelligence for Modern Organizations",
     description:
-      "Vytron Systems designs enterprise regulatory infrastructure and resilient reporting platforms for financial institutions and regulated environments.",
+      "We build intelligent, scalable and compliant systems across enterprise software, AI, data infrastructure, database management, MRI reporting and software factory delivery.",
     url: "https://vytronsystems.com",
     siteName: "Vytron Systems",
     images: [
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Vytron Systems",
-    description: "Regulatory Infrastructure Engineering for Financial Institutions.",
+    description: "Enterprise Software Engineering, AI, Data & MRI Regulatory Reporting.",
     images: ["/vytron-og.png"],
   },
   robots: {
@@ -47,40 +47,55 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   // JSON-LD (AI discovery + SEO)
   const jsonLd = [
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    name: "Vytron Systems",
-    url: "https://vytronsystems.com",
-    logo: "https://vytronsystems.com/logo.png",
-    description:
-      "Enterprise regulatory infrastructure engineering and resilient reporting platforms for financial institutions.",
-    founder: {
-      "@type": "Person",
-      name: "Alexis Santiago Rodriguez Villa",
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": "https://vytronsystems.com/#organization",
+      name: "Vytron Systems",
+      url: "https://vytronsystems.com",
+      logo: "https://vytronsystems.com/logo.png",
+      description:
+        "Enterprise software engineering, AI solutions, data engineering, data governance, database management, MRI regulatory reporting and software factory delivery for regulated and complex environments.",
+      founder: {
+        "@type": "Person",
+        name: "Alexis Santiago Rodriguez Villa",
+      },
+      areaServed: "Global",
+      industry: "Enterprise Software Engineering & Regulatory Technology",
+      knowsAbout: [
+        "Regulatory Reporting",
+        "MRI Reporting Infrastructure",
+        "Enterprise Data Governance",
+        "Data Lineage and Traceability",
+        "Financial Data Governance",
+        "Metadata-driven ETL",
+        "Database Management",
+        "Banking Regulatory Compliance",
+        "Enterprise Data Architecture",
+        "Software Factory Delivery",
+        "Auditability and Controls",
+      ],
+      contactPoint: {
+        "@type": "ContactPoint",
+        url: "https://vytronsystems.com/en/contact",
+        contactType: "business",
+        availableLanguage: ["English", "Spanish"],
+        areaServed: "Global",
+      },
+      sameAs: [
+        "https://www.linkedin.com/company/vytronsystems",
+        "https://github.com/vytronsystems",
+      ],
     },
-    areaServed: "Global",
-    industry: "Regulatory Infrastructure Engineering",
-    knowsAbout: [
-      "Regulatory Reporting",
-      "Financial Data Governance",
-      "Metadata-driven ETL",
-      "Banking Regulatory Compliance",
-      "Enterprise Data Architecture",
-      "Auditability and Controls",
-    ],
-    sameAs: [
-      "https://www.linkedin.com/company/vytronsystems",
-      "https://github.com/vytronsystems",
-    ],
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    name: "Vytron Systems",
-    url: "https://vytronsystems.com",
-  },
-];
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      name: "Vytron Systems",
+      url: "https://vytronsystems.com",
+      inLanguage: ["en", "es"],
+      publisher: { "@id": "https://vytronsystems.com/#organization" },
+    },
+  ];
 
   return (
     <html lang="en" suppressHydrationWarning>

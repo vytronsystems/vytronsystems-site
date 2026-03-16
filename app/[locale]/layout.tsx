@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import Header from "@/components/Header";
+import LocaleLang from "@/components/LocaleLang";
 
 export const dynamicParams = false;
 
@@ -25,6 +26,7 @@ export default async function LocaleLayout({ children, params }: LayoutProps) {
 
 return (
     <NextIntlClientProvider locale={locale} messages={messages}>
+      <LocaleLang locale={locale} />
       <div className="min-h-screen bg-background text-foreground">
         <Header locale={locale} />
 

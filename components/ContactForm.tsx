@@ -1,7 +1,7 @@
 'use client';
 
 import {useMemo, useState} from 'react';
-import {useLocale} from 'next-intl';
+import {useLocale, useTranslations} from 'next-intl';
 
 type Props = {
   contactEmail: string;
@@ -10,6 +10,7 @@ type Props = {
 
 export default function ContactForm({contactEmail, calendlyUrl}: Props) {
   const locale = useLocale() as 'en' | 'es';
+  const t = useTranslations();
 
   const [name, setName] = useState('');
   const [company, setCompany] = useState('');
@@ -206,6 +207,10 @@ export default function ContactForm({contactEmail, calendlyUrl}: Props) {
               : 'Entregables claros: evidencia auditada, linaje, re-ejecuciones y controles operativos.'}
           </li>
         </ul>
+
+        <p className="mt-4 text-sm leading-6 text-white/70">
+          {t('contact_body')}
+        </p>
 
         <div className="mt-6 rounded-xl border border-white/10 bg-black/30 p-4">
           <div className="text-xs font-semibold tracking-widest text-white/60">

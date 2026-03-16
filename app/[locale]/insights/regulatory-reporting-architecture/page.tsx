@@ -1,14 +1,31 @@
-// app/[locale]/insights/regulatory-reporting-architecture/page.tsx
-import { getTranslations } from "next-intl/server";
+import type { Metadata } from 'next';
+import { getTranslations } from 'next-intl/server';
+import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd';
+import ArticleJsonLd from '@/components/ArticleJsonLd';
+import { buildPageMetadata, type Locale } from '@/lib/seo';
 
-export default async function RegulatoryReportingArchitecture() {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  return buildPageMetadata('insightRRA', (locale === 'es' ? 'es' : 'en') as Locale, '/insights/regulatory-reporting-architecture');
+}
+
+export default async function RegulatoryReportingArchitecture({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale: rawLocale } = await params;
+  const locale = (rawLocale === 'es' ? 'es' : 'en') as Locale;
   const t = await getTranslations("insightRRA");
 
   return (
-    <section className="py-16">
+    <section className="py-16 md:py-20">
+      <BreadcrumbJsonLd path="/insights/regulatory-reporting-architecture" locale={locale} />
+      <ArticleJsonLd
+        headline={t('title')}
+        description={t('lede')}
+        locale={locale}
+        path="/insights/regulatory-reporting-architecture"
+      />
       <div className="max-w-3xl">
 
-        <h1 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl">
+        <h1 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl lg:text-5xl">
           {t("title")}
         </h1>
 
@@ -55,7 +72,7 @@ export default async function RegulatoryReportingArchitecture() {
           </div>
 
           {/* CTA Card */}
-          <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
+          <div className="rounded-2xl border border-emerald-500/15 bg-emerald-500/5 p-6">
             <h3 className="text-base font-semibold text-white">
               {t("cta.title")}
             </h3>
