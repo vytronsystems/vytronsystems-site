@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import ContactForm from '@/components/ContactForm';
 import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd';
